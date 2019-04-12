@@ -25,7 +25,7 @@ public class PolyLineTest
     private static Point pl1LR = new Point(150, 200);
     private static PolyLine pl2 = new PolyLine(new Point(50, 70), new Point(100, 100), -25, Color.CYAN, false);
     private static Point pl2UL = new Point(50, 70);
-    private static Point pl2LL = new Point(50, 45);
+    private static Point pl2LL = new Point(50, 45); 
     private static Point pl2UR = new Point(100, 100);
     private static Point pl2LR = new Point(100, 75);
 
