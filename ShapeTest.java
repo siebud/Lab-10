@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Point;
 
 import org.junit.Test;
 
@@ -8,9 +9,9 @@ public class ShapeTest {
 
 	@Test
 	public void ShapeTest() {
-		Shape s1 = new Shape(Color.GREEN, false);
+		Shape s1 = new Circle(new Point(100,100), 25,Color.GREEN, false);
 		Assert.assertEquals("Wrong color", Color.GREEN, s1.getColor());
-		Assert.assertFalse("Wrong fill", s1.isfilled());
-		Assert.assertEquals("Location",  null, s1.getLocation());
+		Assert.assertFalse("Wrong fill", s1.isFilled());
+		Assert.assertEquals("Location", new Point[] { new Point(100,100)}.length, s1.getLocation().length);
 	}
 }

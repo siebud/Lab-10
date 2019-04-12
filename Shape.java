@@ -2,8 +2,8 @@ import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.Color;
 
-public class Shape implements Drawable{
-	private Point[] location;
+public abstract class Shape implements Drawable{
+	protected Point[] location;
 	private Color color;
 	private boolean filled;
 	
@@ -16,7 +16,7 @@ public class Shape implements Drawable{
 		return color;
 	}
 	
-	public boolean isfilled() {
+	public boolean isFilled() {
 		return filled;
 	}
 	
