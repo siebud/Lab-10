@@ -10,7 +10,7 @@ import java.awt.Point;
  * Class to represent and define how a sinusoid is drawn
  * 
  * @author MoSho
- * @author _______________
+ * @author siebud
  * @version April 11, 2019
  */
 public class Sinusoid extends Shape 
@@ -55,7 +55,7 @@ public class Sinusoid extends Shape
 		location = new Point[timeFrame];
 		location[0] = start;
 
-		// Set the wave offsets for x and y as teh starting point of the sinusoid
+		// Set the wave offsets for x and y as the starting point of the sinusoid
 		int x0 = location[0].x;
 		int y0 = location[0].y; 
 		
@@ -75,10 +75,11 @@ public class Sinusoid extends Shape
 			// TODO: calculate next x,y point
 			//y = yOffset + amplitude * sin(radians)
 			//x = xOffset + i * dx;
-			int xNext = ... // TODO:
-			int yNext = ... // TODO:
+			int xNext = (x0 + i*dx);
+			int yNext = y0 + (int) (amplitude * Math.sin(rad));// TODO:
 			
 			// TODO: create a point and store it into the locations list
+			location[i] = new Point(xNext, yNext);
 		}
 	}
 
@@ -99,6 +100,9 @@ public class Sinusoid extends Shape
         int nPoints = location.length;
         
         // TODO: Draw a sequence of connected line segments to render a sinusoid
+        for(int i = 0; i < nPoints-1; i++) {
+        	g2d.drawLine(location[i].x, location[i].y, location[i+1].x, location[i+1].y);
+        }
 
 	}
 

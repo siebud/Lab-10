@@ -87,7 +87,6 @@ public class SinusoidTest
 		
 		Point[] pts = sin.getLocation();
 		int npts = pts.length;
-		
 		if (npts != sf * frq * len) return false;
 		
 		if (!ShapeUtils.pointInSet(pts, new Point(x0,y0))) return false; 
