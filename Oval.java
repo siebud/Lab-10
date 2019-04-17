@@ -24,6 +24,9 @@ public class Oval extends Shape{
 	public void draw(Graphics graphics) {
 		Graphics2D g2d = (Graphics2D) graphics;
 		g2d.setColor(this.getColor());
+		if(isFilled()) {
+			g2d.fillOval(location[0].x, location[0].y, diameter1,  diameter2);
+		}
 		g2d.drawOval(location[0].x, location[0].y, diameter1,  diameter2);
 	}
 

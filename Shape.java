@@ -23,4 +23,5 @@ public abstract class Shape implements Drawable{
 	public Point[] getLocation() {
 		return location;
 	}
+	
 }

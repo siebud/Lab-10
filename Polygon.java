@@ -10,8 +10,17 @@ public abstract class Polygon extends Shape{
 		Graphics2D g2d = (Graphics2D) graphics;
 		g2d.setColor(this.getColor());
 		int nPoints = location.length;
+		int[] xs = new int[nPoints];
+		int[] ys = new int[nPoints];
+		
 		for(int i = 0; i < nPoints - 1; i++) {
-			g2d.drawLine(location[i].x, location[i].y, location[i+1].x,  location[i+1].y);
+			xs[i] = location[i].x;
+			ys[i] = location[i].y;
 		}
+		if(isFilled()) {
+			g2d.fillPolygon(xs, ys, nPoints);
+		}
+		else
+			g2d.drawPolygon(xs, ys, nPoints);
 	}
 }
