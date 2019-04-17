@@ -100,7 +100,7 @@ public class Sinusoid extends Shape
         int nPoints = location.length;
         
         // TODO: Draw a sequence of connected line segments to render a sinusoid
-        for(int i = 0; i < nPoints-1; i++) {
+        for(int i = 0; i < duration-1; i++) {
         	g2d.drawLine(location[i].x, location[i].y, location[i+1].x, location[i+1].y);
         }
 

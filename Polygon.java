@@ -13,7 +13,7 @@ public abstract class Polygon extends Shape{
 		int[] xs = new int[nPoints];
 		int[] ys = new int[nPoints];
 		
-		for(int i = 0; i < nPoints - 1; i++) {
+		for(int i = 0; i < nPoints; i++) {
 			xs[i] = location[i].x;
 			ys[i] = location[i].y;
 		}
